@@ -91,9 +91,9 @@ def convert(matrix):
         matrix[i][extra_index] = 1
         extra_index -= 1
 
-    print("matrix")
-    print(eq_matrix)
-    print("end")
+    # print("matrix")
+    # print(eq_matrix)
+    # print("end")
     return eq_matrix
 
 # convert({1:(3, [2,3]), 2:(3, [1,4]), 3: (2, [2,4])})
@@ -138,6 +138,29 @@ def create_matrix(faculties):
         matrix[i].append(faculties[i].maxload)
     for i in range(n, n + maxCourses):
         matrix[i].append(2)
+
+    print("original")
+    for i in matrix:
+        print(i)
+    print("new")
+    
+    # extending the matrix
+    for i in range(n):
+        for j in range(n + maxCourses):
+            matrix[j].insert(0, 0)
+    
+    # putting right values
+    extra_index = n-1
+    for i in range(n):
+        matrix[i][extra_index] = 1
+        extra_index -= 1
+
+    print("matrix")
+    for i in range(len(matrix)):
+        print(matrix[i])
+    print(len(matrix[0]))
+    print("end")
+
     return matrix 
 
 
@@ -153,26 +176,28 @@ def create_matrix(faculties):
 #           Faculty(3, [[2, 0], [3, 0], [4, 0], [5, 0]]),
 #           ]
 matrix3 = create_dict()
-for i in matrix3:
-    print(i.name)
+# for i in matrix3:
+#     print(i.name)
 temp2 = create_matrix(matrix3)
-for i in range(len(temp2)):
-    print(temp2[i])
-print(temp2)
+# for i in range(len(temp2)):
+#     print(temp2[i])
+# print(temp2)
 M = Matrix(temp2)
 null = M.nullspace()
 null_list = []
 for i in range(len(null)):
     null_list.append(null[i].tolist())
 null_list_final = []
+
 temppp = []
 for i in range(len(null_list)):
     for j in range(len(null_list[0])):
         temppp.append(null_list[i][j][0])
     null_list_final.append(temppp)
     temppp = []
-print(null_list_final)
-    
+# print(null_list_final)
+for i in null_list_final:
+    print(i)  
 num_vars = len(null_list)
 final_ans = []
 temp_ans = []
@@ -216,5 +241,8 @@ for sol in generated_vectors:
     final_sol.append(matrix3)
     if(count>10):
         break
-for f in final_sol[0]:
-    print(f.pref)
+if final_sol:
+    for j in final_sol:
+        for f in j:
+            print(f.pref)
+        print()
