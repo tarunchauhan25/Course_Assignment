@@ -80,7 +80,20 @@ def convert(matrix):
     for i in range(n, len(eq_matrix)):
         eq_matrix[i][-1] = 2 
 
-    #print(eq_matrix)
+    # extending the matrix
+    for i in range(n):
+        for j in range(n + totalCourses):
+            matrix[i][j].insert(0, 0)
+    
+    # putting right values
+    extra_index = n-1
+    for i in range(n):
+        matrix[i][extra_index] = 1
+        extra_index -= 1
+
+    print("matrix")
+    print(eq_matrix)
+    print("end")
     return eq_matrix
 
 # convert({1:(3, [2,3]), 2:(3, [1,4]), 3: (2, [2,4])})
