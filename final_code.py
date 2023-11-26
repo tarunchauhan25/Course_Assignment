@@ -91,9 +91,9 @@ def convert(matrix):
         matrix[i][extra_index] = 1
         extra_index -= 1
 
-    print("matrix")
+    print("-----------------------matrix-----------------------")
     print(eq_matrix)
-    print("end")
+    print("-----------------------end--------------------------")
     return eq_matrix
 
 # convert({1:(3, [2,3]), 2:(3, [1,4]), 3: (2, [2,4])})
@@ -153,11 +153,7 @@ def create_matrix(faculties):
 #           Faculty(3, [[2, 0], [3, 0], [4, 0], [5, 0]]),
 #           ]
 matrix3 = create_dict()
-for i in matrix3:
-    print(i.name)
-temp2 = create_matrix(matrix3)
-for i in range(len(temp2)):
-    print(temp2[i])
+temp2 = convert(matrix3)
 print(temp2)
 M = Matrix(temp2)
 null = M.nullspace()
@@ -171,7 +167,7 @@ for i in range(len(null_list)):
         temppp.append(null_list[i][j][0])
     null_list_final.append(temppp)
     temppp = []
-print(null_list_final)
+# print(null_list_final)
     
 num_vars = len(null_list)
 final_ans = []
