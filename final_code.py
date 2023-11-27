@@ -3,7 +3,10 @@ from sympy import Matrix, Eq, linsolve
 import numpy as np
 import itertools
 import copy
-
+#Explain Potential Modifications
+mode = 1 #Mode of Operation
+#0 For Half Assignment Mode
+#1 For Complete Assignment Mode
 print("Programme started")
 # print("Programme is running...............")
 class Faculty:
@@ -61,12 +64,14 @@ print("Creating Null Space.......")
 def find_all_possible_vectors(null_space):
     # Create an empty list to store the generated vectors
     generated_vectors = []
-    generated_vector_rs = []
+    generated_vector_rs_1 = []
+    generated_vector_rs_2 = []
+    generated_vector_rs_3 = []
     final_ans = []
     # Iterate through all possible combinations of coefficients
     print("Iterating through all possible combinations.......")
     t =  0
-    for coefficients in itertools.product([1, 2 , 0], repeat=min(len(null_space), 10)):
+    for coefficients in itertools.product([2,1,0] if mode else [1,2,0], repeat=min(len(null_space), 10)):
         # Generate a linear combination using the current coefficients
         t = t +1
         if(t==pow(3,9)):
@@ -76,52 +81,33 @@ def find_all_possible_vectors(null_space):
         elif(t == pow(3,10)):
             print("Iterations Completed.........")
         generated_vector = np.zeros_like(null_space[0])
-        generated_vector_r = np.zeros_like(null_space[0])
+        generated_vector_r_1 = np.zeros_like(null_space[0])
+        generated_vector_r_2 = np.zeros_like(null_space[0])
+        generated_vector_r_3 = np.zeros_like(null_space[0])
         for i, coefficient in enumerate(coefficients):
             if i != len(coefficients) - 1:
                 generated_vector += coefficient * null_space[-i - 2]
-                generated_vector_r += (
-                    coefficient * null_space[(i + 10) % len(null_space)]
-                )
+                generated_vector_r_1 += (coefficient * null_space[(-i - 22) % len(null_space)])
+                generated_vector_r_2 += (coefficient * null_space[(i+20) % len(null_space)])
+                generated_vector_r_3 += coefficient * null_space[i] 
         generated_vector -= null_space[-1]
-        generated_vector_r -= null_space[-1]
+        generated_vector_r_1 -= null_space[-1]
+        generated_vector_r_2 -= null_space[-1]
+        generated_vector_r_3 -= null_space[-1]
         # Check if the generated vector is already in the list
         if generated_vector.tolist() not in generated_vectors:
             if all_positive(generated_vector.tolist()):
                 generated_vectors.append(generated_vector.tolist())
-        if generated_vector_r.tolist() not in generated_vector_rs:
-            if all_positive(generated_vector_r.tolist()):
-                generated_vector_rs.append(generated_vector_r.tolist())
-    return generated_vectors, generated_vector_rs
-def convert(matrix):
-    n = len(matrix)
-    totalCourses = 0
-    columns = 0
-    for i in range(1, n + 1):
-        totalCourses = max(totalCourses, max(matrix[i][1]))
-        columns += len(matrix[i][1])
-    eq_matrix = [[0 for i in range(columns + 1)] for j in range(n + totalCourses)]
-    weight = 0
-    for i in range(1, n + 1):
-        for j in range(len(matrix[i][1])):
-            eq_matrix[i - 1][weight] = 1
-            eq_matrix[n + matrix[i][1][j] - 1][weight] = 1
-            weight += 1
-        eq_matrix[i - 1][-1] = matrix[i][0]
-
-    for i in range(n, len(eq_matrix)):
-        eq_matrix[i][-1] = 2
-    # extending the matrix
-    for i in range(n):
-        for j in range(n + totalCourses):
-            matrix[i][j].insert(0, 0)
-    # putting right values
-    extra_index = n - 1
-    for i in range(n):
-        matrix[i][extra_index] = 1
-        extra_index -= 1
-
-    return eq_matrix
+        if generated_vector_r_1.tolist() not in generated_vector_rs_1:
+            if all_positive(generated_vector_r_1.tolist()):
+                generated_vector_rs_1.append(generated_vector_r_1.tolist())
+        if generated_vector_r_2.tolist() not in generated_vector_rs_2:
+            if all_positive(generated_vector_r_2.tolist()):
+                generated_vector_rs_2.append(generated_vector_r_2.tolist())
+        if generated_vector_r_3.tolist() not in generated_vector_rs_3:
+            if all_positive(generated_vector_r_3.tolist()):
+                generated_vector_rs_3.append(generated_vector_r_3.tolist())
+    return generated_vectors, generated_vector_rs_1, generated_vector_rs_2, generated_vector_rs_3
 
 def create_matrix(faculties):
     # faculties is a list of faculties
@@ -182,28 +168,31 @@ for i in range(len(null_list)):
 num_vars = len(null_list)
 final_ans = []
 temp_ans = []
-coeff = [2 for i in range(num_vars)]
-for i in range(min(1000000, pow(3, num_vars))):
-    for j in range(len(null_list[0])):
-        tempSum = 0
-        for k in range(num_vars - 1):
-            tempSum += null_list[k][j][0]
-        tempSum -= null_list[-1][j][0]
-        if tempSum < 0:
-            temp_ans = []
-            break
-        temp_ans.append(tempSum)
-    final_ans.append(temp_ans)
-    coeff[-2] -= 1
-    if coeff[-2] == -1:
-        coeff[-2] = 2
-        coeff[-3] -= 1
-        if coeff[-3] == -1:
-            break
+# coeff = [2 for i in range(num_vars)]
+# for i in range(min(1000000, pow(3, num_vars))):
+#     for j in range(len(null_list[0])):
+#         tempSum = 0
+#         for k in range(num_vars - 1):
+#             tempSum += null_list[k][j][0]
+#         tempSum -= null_list[-1][j][0]
+#         if tempSum < 0:
+#             temp_ans = []
+#             break
+#         temp_ans.append(tempSum)
+#     final_ans.append(temp_ans)
+#     coeff[-2] -= 1
+#     if coeff[-2] == -1:
+#         coeff[-2] = 2
+#         coeff[-3] -= 1
+#         if coeff[-3] == -1:
+#             break
 
 null_space = np.array(null_list_final)
-generated_vectors, generated_vector_rs = find_all_possible_vectors(null_space)
-# print("ans")
+generated_vector,generated_vector_rs_1,generated_vector_rs_2,generated_vector_rs_3 = find_all_possible_vectors(null_space)
+print("No of Solution in First Iteration:- "+str(len(generated_vector)))
+print("No of Solution in Second Iteration:- "+str(len(generated_vector_rs_1)))
+print("No of Solution in Third Iteration:- "+str(len(generated_vector_rs_2)))
+print("No of Solution in Fourth Iteration:- "+str(len(generated_vector_rs_3)))
 count = 0
 print("Copying the solutions to output.txt file")
 # print(len(generated_vectors))
@@ -212,12 +201,38 @@ final_sol = []
 file = open("output.txt", "w")
 final_assignment = {}
 all_final_assignment = {}
-for sol in generated_vectors:
+for sol in generated_vector:
     f_a = []
     fac_assignment = {}
     ca = 0
     for i, s in enumerate(reversed(sol)):
-        if i != 0 and i <= len(matrix3) * len(matrix3[0].pref) and s != 0:
+        if i != 0 and i <= (len(matrix3) * len(matrix3[0].pref)) and s != 0:
+            if matrix3[(i - 1) % (len(matrix3))].name in final_assignment:
+                final_assignment[matrix3[(i - 1) % (len(matrix3))].name].append(
+                    [
+                        matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][
+                            0
+                        ],
+                        s / 2,
+                    ]
+                )
+            else:
+                final_assignment[matrix3[(i - 1) % (len(matrix3))].name] = [
+                    [matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][0],s/2,]
+                ]
+    all_final_assignment[count + 1] = final_assignment
+    final_assignment = {}
+    final_sol.append(f_a)
+    count = count + 1
+    if count > 15:
+        break
+    
+for sol in generated_vector_rs_1:
+    f_a = []
+    fac_assignment = {}
+    ca = 0
+    for i, s in enumerate(reversed(sol)):
+        if i != 0 and i <= (len(matrix3) * len(matrix3[0].pref)) and s != 0:
             if matrix3[(i - 1) % (len(matrix3))].name in final_assignment:
                 final_assignment[matrix3[(i - 1) % (len(matrix3))].name].append(
                     [
@@ -240,13 +255,15 @@ for sol in generated_vectors:
     final_assignment = {}
     final_sol.append(f_a)
     count = count + 1
-    if count > 10:
+    if count > 15:
         break
-for sol in generated_vector_rs:
+
+for sol in generated_vector_rs_2:
     f_a = []
+    fac_assignment = {}
     ca = 0
     for i, s in enumerate(reversed(sol)):
-        if i != 0 and i <= len(matrix3) * len(matrix3[0].pref) and s != 0:
+        if i != 0 and i <= (len(matrix3) * len(matrix3[0].pref)) and s != 0:
             if matrix3[(i - 1) % (len(matrix3))].name in final_assignment:
                 final_assignment[matrix3[(i - 1) % (len(matrix3))].name].append(
                     [
@@ -265,11 +282,44 @@ for sol in generated_vector_rs:
                         s / 2,
                     ]
                 ]
+    all_final_assignment[count + 1] = final_assignment
     final_assignment = {}
     final_sol.append(f_a)
     count = count + 1
-    if count > 10:
+    if count > 15:
         break
+
+for sol in generated_vector_rs_3:
+    f_a = []
+    fac_assignment = {}
+    ca = 0
+    for i, s in enumerate(reversed(sol)):
+        if i != 0 and i <= (len(matrix3) * len(matrix3[0].pref)) and s != 0:
+            if matrix3[(i - 1) % (len(matrix3))].name in final_assignment:
+                final_assignment[matrix3[(i - 1) % (len(matrix3))].name].append(
+                    [
+                        matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][
+                            0
+                        ],
+                        s / 2,
+                    ]
+                )
+            else:
+                final_assignment[matrix3[(i - 1) % (len(matrix3))].name] = [
+                    [
+                        matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][
+                            0
+                        ],
+                        s / 2,
+                    ]
+                ]
+    all_final_assignment[count + 1] = final_assignment
+    final_assignment = {}
+    final_sol.append(f_a)
+    count = count + 1
+    if count > 15:
+        break
+
 
 def makeStringForLoad(num):
     if num == 0.5:
