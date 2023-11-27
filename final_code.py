@@ -255,21 +255,29 @@ print(len(generated_vectors))
 print(len(generated_vector_rs))
 final_sol = []
 file = open ('output.txt', 'w')   
+final_assignment = {}
+all_final_assignment = {}
 for sol in generated_vectors:
     f_a = []
     fac_assignment = {}
     ca = 0
-    file.write("Possible Solution Number "+str(count+1))
-    file.write('\n')
-    print("Possible Solution Number "+str(count+1))
+    # file.write("Possible Solution Number "+str(count+1))
+    # file.write('\n')
+    # print("Possible Solution Number "+str(count+1))
     for i,s in enumerate(reversed(sol)):
         if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
-            print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
-            file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
-            file.write('\n')
-    print("--------------------End-Case----------------------")
-    file.write("--------------------End-Case----------------------")
-    file.write('\n')
+            if matrix3[(i-1)%(len(matrix3))].name in final_assignment:
+                final_assignment[matrix3[(i-1)%(len(matrix3))].name].append([matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0], s/2])
+            else:
+                final_assignment[matrix3[(i-1)%(len(matrix3))].name] = [[matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0], s/2]]
+            # print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+            # file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
+            # file.write('\n')
+    all_final_assignment[count+1] = final_assignment
+    final_assignment = {}
+    # print("--------------------End-Case----------------------")
+    # file.write("--------------------End-Case----------------------")
+    # file.write('\n')
     final_sol.append(f_a)
     count = count + 1
     if(count>10):
@@ -277,22 +285,62 @@ for sol in generated_vectors:
 for sol in generated_vector_rs:
     f_a = []
     ca = 0
-    file.write("Possible Solution Number "+str(count+1))
-    file.write('\n')
-    print("Possible Solution Number "+str(count+1))
+    # file.write("Possible Solution Number "+str(count+1))
+    # file.write('\n')
+    # print("Possible Solution Number "+str(count+1))
     for i,s in enumerate(reversed(sol)):
         if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
-            print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
-            file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
-            file.write('\n')
-    print("--------------------End-Case----------------------")
-    file.write("--------------------End-Case----------------------")
-    file.write('\n')
+            if matrix3[(i-1)%(len(matrix3))].name in final_assignment:
+                final_assignment[matrix3[(i-1)%(len(matrix3))].name].append([matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0], s/2])
+            else:
+                final_assignment[matrix3[(i-1)%(len(matrix3))].name] = [[matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0], s/2]]
+            # print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+            # file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
+            # file.write('\n')
+    all_final_assignment[count+1] = final_assignment
+    final_assignment = {}
+    # print("--------------------End-Case----------------------")
+    # file.write("--------------------End-Case----------------------")
+    # file.write('\n')
     final_sol.append(f_a)
     count = count + 1
     if(count>10):
         break
+print(all_final_assignment)
+print("better format: ")
+for i in all_final_assignment.keys():
+    print(i)
+    for j in all_final_assignment[i].keys():
+        print(j, all_final_assignment[i][j])
+
+def makeStringForLoad(num):
+    if num == 0.5:
+        return "half"
+    elif num == 1:
+        return "full"
+
+for case in all_final_assignment.keys():
+    print("Possible Solution Number: ", case)
+    file.write("Possible Solution Number: " + str(case))
+    file.write('\n')
+    for faculty in all_final_assignment[case]:
+        print(str(faculty) + " is assigned ", end = "")
+        file.write(str(str(faculty) + " is assigned "))
+        for courses in range(len(all_final_assignment[case][faculty])):
+            if courses != 0:
+                print("and ", end = "")
+                file.write("and ")
+            print(makeStringForLoad(all_final_assignment[case][faculty][courses][1]) + " course " + str(all_final_assignment[case][faculty][courses][0]) + " ", end = "")
+            file.write(str(makeStringForLoad(all_final_assignment[case][faculty][courses][1]) + " course " + str(all_final_assignment[case][faculty][courses][0]) + " "))
+        # print(".")
+        print()
+        file.write('\n')
+    print("------------------End-Case------------------")
+    file.write("------------------End-Case------------------")
+    file.write('\n')
+
 file.close()  
+
 # if final_sol:
 #     for j in final_sol:
 #         for f in j:
