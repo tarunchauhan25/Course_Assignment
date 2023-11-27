@@ -56,7 +56,7 @@ def find_all_possible_vectors(null_space):
         for i, coefficient in enumerate(coefficients):
             if i != len(coefficients) - 1:
                 generated_vector += coefficient * null_space[-i-2]
-                generated_vector_r += coefficient * null_space[i]
+                generated_vector_r += coefficient * null_space[(i+10)%len(null_space)]
         generated_vector -= null_space[-1]
         generated_vector_r -= null_space[-1]
         # Check if the generated vector is already in the list
@@ -251,12 +251,13 @@ generated_vectors,generated_vector_rs = find_all_possible_vectors(null_space)
 # print(len(null_space))
 print("ans")
 count=0
-# print(len(generated_vectors[0]))
-# print(len(generated_vectors[1]))
+print(len(generated_vectors))
+print(len(generated_vector_rs))
 final_sol = []
 file = open ('output.txt', 'w')   
 for sol in generated_vectors:
     f_a = []
+    fac_assignment = {}
     ca = 0
     file.write("Possible Solution Number "+str(count+1))
     file.write('\n')
