@@ -1,182 +1,172 @@
-Possible Solution Number 1
-a is assigned 0.5 course 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 0.5 course 8
-i is assigned 0.5 course 3
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 0.5 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 2
-a is assigned 0.5 course 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 0.5 course 8
-i is assigned 1.0 course 3
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 3
-a is assigned 0.5 course 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 0.5 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 1.0 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 4
-a is assigned 0.5 course 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-i is assigned 0.5 course 3
-i is assigned 0.5 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 0.5 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 5
-a is assigned 0.5 course 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-i is assigned 0.5 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 1.0 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 6
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 0.5 course 8
-i is assigned 0.5 course 3
-i is assigned 0.5 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 0.5 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 7
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 0.5 course 8
-i is assigned 0.5 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 1.0 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 8
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 1.0 course 8
-i is assigned 0.5 course 3
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 0.5 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 9
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 1.0 course 8
-i is assigned 1.0 course 3
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 10
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-g is assigned 1.0 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 1.0 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 11
-b is assigned 0.5 course 1
-d is assigned 0.5 course 7
-e is assigned 0.5 course 2
-i is assigned 1.0 course 8
-a is assigned 1.0 course 6
-c is assigned 1.0 course 4
-h is assigned 1.0 course 5
-j is assigned 1.0 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
-Possible Solution Number 12
-a is assigned 0.5 course 1
-b is assigned 0.5 course 8
-c is assigned 0.5 course 3
-d is assigned 0.5 course 4
-e is assigned 0.5 course 7
-h is assigned 0.5 course 4
-i is assigned 0.5 course 8
-j is assigned 0.5 course 2
-a is assigned 1.0 course 6
-h is assigned 1.0 course 5
-j is assigned 0.5 course 3
-k is assigned 0.5 course 1
-l is assigned 0.5 course 7
-m is assigned 0.5 course 2
-n is assigned 1.0 course 9
---------------------End-Case----------------------
+Possible Solution Number: 1
+a is assigned half course 8 and full course 6 
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned half course 8 
+i is assigned half course 3 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned half course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 2
+a is assigned half course 8 and full course 6 
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned half course 8 
+i is assigned full course 3 
+c is assigned full course 4 
+h is assigned full course 5 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 3
+a is assigned half course 8 and full course 6 
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned half course 8 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned full course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 4
+a is assigned half course 8 and full course 6 
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+i is assigned half course 3 and half course 8 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned half course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 5
+a is assigned half course 8 and full course 6 
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+i is assigned half course 8 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned full course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 6
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned half course 8 
+i is assigned half course 3 and half course 8 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned half course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 7
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned half course 8 
+i is assigned half course 8 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned full course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 8
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned full course 8 
+i is assigned half course 3 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned half course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 9
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned full course 8 
+i is assigned full course 3 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 10
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+g is assigned full course 8 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned full course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 11
+b is assigned half course 1 
+d is assigned half course 7 
+e is assigned half course 2 
+i is assigned full course 8 
+a is assigned full course 6 
+c is assigned full course 4 
+h is assigned full course 5 
+j is assigned full course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
+Possible Solution Number: 12
+a is assigned half course 1 and full course 6 
+b is assigned half course 8 
+c is assigned half course 3 
+d is assigned half course 4 
+e is assigned half course 7 
+h is assigned half course 4 and full course 5 
+i is assigned half course 8 
+j is assigned half course 2 and half course 3 
+k is assigned half course 1 
+l is assigned half course 7 
+m is assigned half course 2 
+n is assigned full course 9 
+------------------End-Case------------------
