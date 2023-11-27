@@ -280,6 +280,8 @@ def makeStringForLoad(num):
 
 for case in all_final_assignment.keys():
     # print("Possible Solution Number: ", case)
+    file.write("------------------Start-Case------------------")
+    file.write("\n")
     file.write("Possible Solution Number: " + str(case))
     file.write("\n")
     for faculty in all_final_assignment[case]:
@@ -308,6 +310,8 @@ for case in all_final_assignment.keys():
         file.write("\n")
     # print("------------------End-Case------------------")
     file.write("------------------End-Case------------------")
+    file.write("\n")
+    file.write("\n")
     file.write("\n")
 print("Completed, check output.txt")
 file.close()
