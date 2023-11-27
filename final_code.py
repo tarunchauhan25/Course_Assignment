@@ -2,7 +2,7 @@ import pandas as pd
 from sympy import Matrix, Eq, linsolve 
 import numpy as np
 import itertools
-
+import copy
 class Faculty:
     def __init__(self,name,id,maxload,prefl):
         self.name = name
@@ -46,6 +46,30 @@ def all_positive(list1):
 def find_all_possible_vectors(null_space):
     # Create an empty list to store the generated vectors
     generated_vectors = []
+    generated_vector_rs = []
+    final_ans = []
+    # Iterate through all possible combinations of coefficients
+    for coefficients in itertools.product([1,2,0], repeat=min(len(null_space),10)):
+        # Generate a linear combination using the current coefficients
+        generated_vector = np.zeros_like(null_space[0])
+        generated_vector_r = np.zeros_like(null_space[0])
+        for i, coefficient in enumerate(coefficients):
+            if i != len(coefficients) - 1:
+                generated_vector += coefficient * null_space[-i-2]
+                generated_vector_r += coefficient * null_space[i]
+        generated_vector -= null_space[-1]
+        generated_vector_r -= null_space[-1]
+        # Check if the generated vector is already in the list
+        if generated_vector.tolist() not in generated_vectors:
+          if(all_positive(generated_vector.tolist())):
+              generated_vectors.append(generated_vector.tolist())
+        if generated_vector_r.tolist() not in generated_vector_rs:
+          if(all_positive(generated_vector_r.tolist())):
+              generated_vector_rs.append(generated_vector_r.tolist())
+    return generated_vectors,generated_vector_rs
+def find_all_possible_vectors_r(null_space):
+    # Create an empty list to store the generated vectors
+    generated_vectors = []
     # Iterate through all possible combinations of coefficients
     for coefficients in itertools.product([1,2,0], repeat=min(len(null_space),10)):
         # Generate a linear combination using the current coefficients
@@ -60,6 +84,7 @@ def find_all_possible_vectors(null_space):
               generated_vectors.append(generated_vector.tolist())
     return generated_vectors
 # Example usage
+
 
 def convert(matrix):
     n = len(matrix)
@@ -79,21 +104,19 @@ def convert(matrix):
 
     for i in range(n, len(eq_matrix)):
         eq_matrix[i][-1] = 2 
-
     # extending the matrix
     for i in range(n):
         for j in range(n + totalCourses):
             matrix[i][j].insert(0, 0)
-    
     # putting right values
     extra_index = n-1
     for i in range(n):
         matrix[i][extra_index] = 1
         extra_index -= 1
 
-    print("-----------------------matrix-----------------------")
-    print(eq_matrix)
-    print("-----------------------end--------------------------")
+    # print("matrix")
+    # print(eq_matrix)
+    # print("end")
     return eq_matrix
 
 # convert({1:(3, [2,3]), 2:(3, [1,4]), 3: (2, [2,4])})
@@ -138,6 +161,29 @@ def create_matrix(faculties):
         matrix[i].append(faculties[i].maxload)
     for i in range(n, n + maxCourses):
         matrix[i].append(2)
+
+    # print("original")
+    # for i in matrix:
+    #     print(i)
+    # print("new")
+    
+    # extending the matrix
+    for i in range(n):
+        for j in range(n + maxCourses):
+            matrix[j].insert(0, 0)
+    
+    # putting right values
+    extra_index = n-1
+    for i in range(n):
+        matrix[i][extra_index] = 1
+        extra_index -= 1
+
+    # print("matrix")
+    # for i in range(len(matrix)):
+    #     print(matrix[i])
+    # print(len(matrix[0]))
+    # print("end")
+
     return matrix 
 
 
@@ -153,14 +199,19 @@ def create_matrix(faculties):
 #           Faculty(3, [[2, 0], [3, 0], [4, 0], [5, 0]]),
 #           ]
 matrix3 = create_dict()
-temp2 = convert(matrix3)
-print(temp2)
+# for i in matrix3:
+#     print(i.name)
+temp2 = create_matrix(matrix3)
+# for i in range(len(temp2)):
+#     print(temp2[i])
+# print(temp2)
 M = Matrix(temp2)
 null = M.nullspace()
 null_list = []
 for i in range(len(null)):
     null_list.append(null[i].tolist())
 null_list_final = []
+
 temppp = []
 for i in range(len(null_list)):
     for j in range(len(null_list[0])):
@@ -196,21 +247,39 @@ for i in range(min(1000000, pow(3, num_vars))):
 # print(final_ans)
 
 null_space = np.array(null_list_final)
-generated_vectors = find_all_possible_vectors(null_space)
+generated_vectors,generated_vector_rs = find_all_possible_vectors(null_space)
 # print(len(null_space))
 print("ans")
-print(len(null_list_final))
 count=0
-print(len(generated_vectors))
+# print(len(generated_vectors[0]))
+# print(len(generated_vectors[1]))
 final_sol = []
 for sol in generated_vectors:
-    count2 = 2
-    for i in range(len(matrix3[0].pref)):
-        for j in range(len(matrix3)):
-            matrix3[j].pref[i][1] = sol[-count2]
-            count2=count2+1
-    final_sol.append(matrix3)
+    f_a = []
+    ca = 0
+    print("Possible Solution Number "+str(count+1))
+    for i,s in enumerate(reversed(sol)):
+        if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
+            print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+    print("--------------------End-Case----------------------")
+    final_sol.append(f_a)
+    count = count + 1
     if(count>10):
         break
-for f in final_sol[0]:
-    print(f.pref)
+for sol in generated_vector_rs:
+    f_a = []
+    ca = 0
+    print("Possible Solution Number "+str(count+1))
+    for i,s in enumerate(reversed(sol)):
+        if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
+            print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+    print("--------------------End-Case----------------------")
+    final_sol.append(f_a)
+    count = count + 1
+    if(count>10):
+        break
+# if final_sol:
+#     for j in final_sol:
+#         for f in j:
+#             print(f.pref)
+#         print()
