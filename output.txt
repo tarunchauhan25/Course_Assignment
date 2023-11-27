@@ -1,0 +1,120 @@
+Possible Solution Number 1
+i is assigned 1.0 course 8
+o is assigned 0.5 course 3
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+f is assigned 0.5 course 2
+h is assigned 0.5 course 5
+j is assigned 0.5 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 0.5 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------
+Possible Solution Number 2
+i is assigned 1.0 course 8
+o is assigned 1.0 course 3
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+f is assigned 0.5 course 2
+h is assigned 0.5 course 5
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 0.5 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------
+Possible Solution Number 3
+i is assigned 1.0 course 8
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+f is assigned 0.5 course 2
+h is assigned 0.5 course 5
+j is assigned 1.0 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 0.5 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------
+Possible Solution Number 4
+i is assigned 1.0 course 8
+o is assigned 0.5 course 3
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+h is assigned 0.5 course 5
+j is assigned 0.5 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 0.5 course 2
+n is assigned 1.0 course 9
+o is assigned 0.5 course 2
+--------------------End-Case----------------------
+Possible Solution Number 5
+i is assigned 1.0 course 8
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+h is assigned 0.5 course 5
+j is assigned 1.0 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 0.5 course 2
+n is assigned 1.0 course 9
+o is assigned 0.5 course 2
+--------------------End-Case----------------------
+Possible Solution Number 6
+i is assigned 1.0 course 8
+o is assigned 0.5 course 3
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+h is assigned 0.5 course 5
+j is assigned 0.5 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 1.0 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------
+Possible Solution Number 7
+i is assigned 1.0 course 8
+o is assigned 1.0 course 3
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+h is assigned 0.5 course 5
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 1.0 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------
+Possible Solution Number 8
+i is assigned 1.0 course 8
+a is assigned 1.0 course 6
+b is assigned 0.5 course 7
+c is assigned 1.0 course 4
+d is assigned 0.5 course 1
+e is assigned 0.5 course 5
+h is assigned 0.5 course 5
+j is assigned 1.0 course 3
+k is assigned 0.5 course 1
+l is assigned 0.5 course 7
+m is assigned 1.0 course 2
+n is assigned 1.0 course 9
+--------------------End-Case----------------------

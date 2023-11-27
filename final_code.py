@@ -254,14 +254,21 @@ count=0
 # print(len(generated_vectors[0]))
 # print(len(generated_vectors[1]))
 final_sol = []
+file = open ('output.txt', 'w')   
 for sol in generated_vectors:
     f_a = []
     ca = 0
+    file.write("Possible Solution Number "+str(count+1))
+    file.write('\n')
     print("Possible Solution Number "+str(count+1))
     for i,s in enumerate(reversed(sol)):
         if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
             print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+            file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
+            file.write('\n')
     print("--------------------End-Case----------------------")
+    file.write("--------------------End-Case----------------------")
+    file.write('\n')
     final_sol.append(f_a)
     count = count + 1
     if(count>10):
@@ -269,15 +276,22 @@ for sol in generated_vectors:
 for sol in generated_vector_rs:
     f_a = []
     ca = 0
+    file.write("Possible Solution Number "+str(count+1))
+    file.write('\n')
     print("Possible Solution Number "+str(count+1))
     for i,s in enumerate(reversed(sol)):
         if(i!=0 and i<=len(matrix3)*len(matrix3[0].pref) and s!=0):
             print(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))  
+            file.write(str(matrix3[(i-1)%(len(matrix3))].name + " is assigned "+str(float(s/2))+" course "+str(matrix3[(i-1)%(len(matrix3))].pref[(i-1)//len(matrix3)][0])))
+            file.write('\n')
     print("--------------------End-Case----------------------")
+    file.write("--------------------End-Case----------------------")
+    file.write('\n')
     final_sol.append(f_a)
     count = count + 1
     if(count>10):
         break
+file.close()  
 # if final_sol:
 #     for j in final_sol:
 #         for f in j:
