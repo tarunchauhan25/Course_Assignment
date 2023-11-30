@@ -1,8 +1,8 @@
 # Course Assignment
 ## Our Team
-1. Tanish Desai(2022A7PS0053G)
-2. Aditya Bagla(2022A7PS0497G)
-3. Tarun Chauhan(2022A7PS0025G)
+1. Tanish Desai (2022A7PS0053G)
+2. Aditya Bagla (2022A7PS0497G)
+3. Tarun Chauhan (2022A7PS0025G)
  
 This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.  
 
@@ -46,8 +46,8 @@ It can be thought of a transportation problem where the main matrix will contain
 
 > ### courseAssignment.py:  
 - `create_dict()` :  takes data from `input.csv` and creates seperate list (array) of `Faculty` objects for fd/hd courses and electives
-- `get_index_of_first_occurrence_of_all_unique_elements(list1,null_space_list)` :
-             - Input: Flatten from of faculty prefernce list and null_space_vectors in a list 
+- `get_index_of_first_occurrence_of_all_unique_elements(list1,null_space_list)` :  
+             - Input: Flatten from of faculty prefernce list and null_space_vectors in a list   
              - Purpose :This function iterates over all the prefernces of faculties and returns the index of first occurence of courses to assign those as free variables on whom we will iterate.
 
 - `all_positive(list1)` :  
