@@ -71,7 +71,7 @@ def write_to_csv(filename, header, data):
 
 if __name__ == "__main__":
     num_faculty = 30  # no of faculties
-    num_courses = 11  # no of FD cdc
+    num_courses = 11  # no of FD cdc ( as per assumption also the algorithm may or may not be optimized to give more than 11 CDC's)
     num_elec_courses = 7  # no of FD electives
     num_hdcdc_courses = 10  # no of HD cdc
     num_hd_ele = 7  # no of HD elec
