@@ -41,7 +41,6 @@ class Initial_hdcdc:
         for i in range(len(self.faculties)):
             for j in range(len(self.faculties[i].hd_cdc_pref)):
                 self.matrix[i][self.faculties[i].hd_cdc_pref[j][0] - 1] = -1 
-        # print(self.matrix)
         return self.createDemand()
 
     def createDemand(self):
@@ -50,7 +49,6 @@ class Initial_hdcdc:
 
     def createSupply(self):
         self.supply = [self.faculties[i].maxload for i in range(len(self.faculties))]
-        # print([self.matrix, self.demands, self.supply])
         return [self.matrix, self.demands, self.supply]
 
     
@@ -126,9 +124,6 @@ class Tricks_hdcdc:
                             new[:,i] = 0
                         elif(divisions!=0):
                             course_count+=1
-                            # self.condition = False 
-                            # return self.operation
-                    # if self.condition == True:
                     self.coursesAssigned = course_count
                     self.allAns.append(new.tolist()) 
             else:
@@ -142,9 +137,6 @@ class Tricks_hdcdc:
         else:
             if self.standingPenalties.count(0) == self.rows or self.rows == 0 or self.columns == 0:
                 if self.ans not in self.allAns:
-                    # print(self.ans)
-                    # print("dem" , self.originalDemand)
-                    # print("supp" , self.originalSupply)
                     for i in range(self.originalDemand): # for each course
                         divisions = 0
                         course_count = 0
@@ -152,13 +144,9 @@ class Tricks_hdcdc:
                             divisions += self.ans[j][i]
                         if divisions != 1:
                             if divisions != 0:
-                                # print("wrong")
                                 return
                         else:
                             course_count = course_count +1    
-                            # self.condition = False 
-                            # return self.operation
-                    # if self.condition == True:
                     self.allAns.append(copy.deepcopy(self.ans)) 
             else:
                 if len(self.allAns) <= 3:
@@ -248,5 +236,4 @@ class Tricks_hdcdc:
             return self.final()
 
     def final(self):
-        # print(self.allAns)
         return self.allAns[-1],self.coursesAssigned
