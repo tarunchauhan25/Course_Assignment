@@ -86,54 +86,46 @@ The `output.txt` file presents several possible solutions for assigning courses 
 ------------------Start-Case------------------
 Possible Solution Number: 1
 FD CDC Assignment
-Professor_1 is assigned half fd cdc course 10 and half fd cdc course 6 
+Professor_1 is assigned full fd cdc course 10 
 Professor_2 is assigned full fd cdc course 7 
-Professor_3 is assigned half fd cdc course 2 and half fd cdc course 3 and half fd cdc course 11 
-Professor_4 is assigned half fd cdc course 11 
-Professor_5 is assigned half fd cdc course 4 
-Professor_6 is assigned half fd cdc course 5 
-Professor_7 is assigned half fd cdc course 1 
-Professor_9 is assigned half fd cdc course 6 and half fd cdc course 1 
-Professor_21 is assigned half fd cdc course 8 
+Professor_3 is assigned full fd cdc course 2 and half fd cdc course 3 
+Professor_4 is assigned full fd cdc course 11 
+Professor_5 is assigned full fd cdc course 4 
+Professor_6 is assigned full fd cdc course 5 
+Professor_7 is assigned full fd cdc course 1 
+Professor_9 is assigned full fd cdc course 6 
+Professor_21 is assigned full fd cdc course 8 
 Professor_17 is assigned full fd cdc course 9 
 Professor_25 is assigned half fd cdc course 3 
-Professor_13 is assigned half fd cdc course 8 
-Professor_18 is assigned half fd cdc course 4 
-Professor_19 is assigned half fd cdc course 10 
-Professor_20 is assigned half fd cdc course 2 
-Professor_22 is assigned half fd cdc course 5 
 
 FD Elective Assignment
 Professor_1 is assigned half fd elective course 1
 Professor_2 is assigned half fd elective course 2
 Professor_4 is assigned half fd elective course 2
-Professor_4 is assigned half fd elective course 4
 Professor_5 is assigned half fd elective course 1
-Professor_5 is assigned half fd elective course 3
-Professor_6 is assigned full fd elective course 6
+Professor_6 is assigned half fd elective course 6
 Professor_7 is assigned half fd elective course 4
-Professor_7 is assigned half fd elective course 5
-Professor_8 is assigned half fd elective course 3
-Professor_8 is assigned full fd elective course 7
+Professor_8 is assigned full fd elective course 3
+Professor_8 is assigned half fd elective course 7
 Professor_9 is assigned half fd elective course 5
+Professor_10 is assigned half fd elective course 4
+Professor_10 is assigned half fd elective course 5
+Professor_11 is assigned half fd elective course 6
+Professor_11 is assigned half fd elective course 7
 Professor_12 is assigned full fd elective course 8
 
 HD CDC Assignment
-Professor_10 is assigned full hd elective course 3
-Professor_11 is assigned full hd elective course 2
-Professor_13 is assigned half hd elective course 4
-Professor_14 is assigned full hd elective course 1
-Professor_18 is assigned half hd elective course 4
-Professor_20 is assigned half hd elective course 5
-Professor_22 is assigned half hd elective course 5
+Professor_13 is assigned full hd cdc course 3
+Professor_14 is assigned full hd cdc course 1
+Professor_15 is assigned full hd cdc course 2
+Professor_18 is assigned full hd cdc course 4
+Professor_20 is assigned full hd cdc course 5
 
 HD Elective Assignment
-Professor_15 is assigned full hd elective course 3
 Professor_16 is assigned full hd elective course 1
-Professor_19 is assigned half hd elective course 4
-Professor_21 is assigned half hd elective course 2
-Professor_23 is assigned half hd elective course 2
-Professor_24 is assigned half hd elective course 4
+Professor_19 is assigned full hd elective course 4
+Professor_22 is assigned full hd elective course 2
+Professor_24 is assigned full hd elective course 5
 ------------------End-Case------------------
 
 ```
