@@ -1,0 +1,365 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{subcaption} %Subfigure
+\usepackage{pifont}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{amssymb,amsbsy}
+\usepackage{amsmath}     
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{varwidth}
+\usepackage{algorithm}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{lmodern}
+\usepackage{natbib}
+\usepackage{mathtools}      
+\usepackage[titletoc]{appendix}
+\usepackage{titletoc}
+\usepackage{ntheorem}
+\DeclareMathOperator{\Hessian}{Hess}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsmath}  
+\usepackage{float}
+\newfloat{algorithm}{t}{lop}
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{tikz}   %allows shapes of nodes
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning, automata}
+\usepackage{makeidx}         
+ \usepackage{blkarray}
+ \usepackage{dcolumn}
+\newcolumntype{L}{D{.}{.}{1.1}}
+\usepackage{multirow}% http://ctan.org/pkg/multirow
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+\usepackage{caption}
+ \usepackage{fancyhdr,graphicx,amsmath,amssymb}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{listings}
+\include{pythonlisting}
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+ 
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage{algorithm, algpseudocode} 
+\captionsetup{compatibility=false} 
+\usepackage{listings}
+\floatstyle{plain} % Box...
+%\restylefloat{figure}% ...figure environment contents.
+
+
+
+
+
+
+\usepackage{bera}
+\usepackage{listings}
+\usepackage{xcolor}
+\title{Simple Yet Elegant}
+\author{Aditya Bagla \\
+(2022A7PS0497G)\\
+\and
+Tanish Desai \\
+(2022A7PS0053G)\\
+\and
+Tarun Chauhan \\
+(2022A7PS0025G) \\}
+\date{November 2023}
+\begin{document}
+\maketitle
+% Brief Intro about problem .......
+\begin{center}
+\textbf{\Large{The University Course Assignment System}}
+\end{center}
+\section{Problem Statement}
+The research problem at hand revolves around the optimization of the University Course Assignment System.Within a department, there are $n$ faculty members categorized into three distinct groups: $x_1,$ $x_2,$ and $x_3.$ Faculty in each category are assigned different course loads, with $x_1$ handling 0.5 courses per semester, $x_2$ taking 1 course per semester, and $x_3$ managing 1.5 courses per semester. In this system, faculty members have the flexibility to take multiple courses in a given semester, and conversely, a single course can be assigned to multiple faculty members. A course can either be taught completely by a single professor, resulting in a professor's load of 1, or a course is shared between two professors, with each professor incurring a load of 0.5 courses.
+Moreover, each faculty member maintains a preference list of courses, ordered by their personal preferences, with the most preferred courses appearing at the top. 
+\newline
+\textbf{The objective of the research is to develop an assignment scheme that maximizes the number of courses assigned to faculty while aligning with their preferences and the category-based constraints ($x_1,$ $x_2,$ $x_3$).}
+\section{Approach Used To Solve}
+% Breif Idea about how we have solved the problem
+In this paper, we propose a novel approach to course allocation using bipartite graph modeling. This approach captures the relationships between faculty members and courses, if they are connected, it represents that faculty can teach that course moreover added weight on each edge which is the percentage of course taught by that faculty member. By formulating a set of constraints within this bipartite graph framework, we can approximate optimal course allocations using linear algebra techniques and the Transportation Problem approach.
+The linear system approach formulates the faculty course allocation problem as a system of linear equations, where each equation represents a constraint, such as maximum teaching load or course preferences. By solving the system of equations, and using the Transportation approach for Electives, the optimal assignment of courses to faculty members can be determined which maximizes the given objective function
+\begin{equation}      
+max(\sum_{i}(\sum_{j} W_{ij}))
+% \label{eq:CES}
+\end{equation}
+where The variable $W_{ij}$ represents the course load assigned to faculty member i for course j.
+\section{The Optimisation Problem}
+In the following problem need to maximise the equation (2)
+\subsection*{Need to optimise:- }\begin{equation}     
+max(\sum_{i}(\sum_{j} W_{ij}))
+\end{equation}
+\subsection*{Under the following constraints:- }
+
+\begin{equation}  
+    \item (\sum_{j\in P} W_{ij})\leq
+    Max\;Course\;Load\;of\;ith \;faculty\;\;\;\;\;\forall{i \in faculties}
+\end{equation}
+P is the set of the courseID in ith faculty preference list.
+\newline 
+Equation (3) represents that the maximum course load of a faculty can't be greater than its max course load. 
+\begin{equation}  
+(\sum_{j\in Q} W_{ij}) &= 1 \;\;\;\;\;\forall{j \in course}
+\end{equation}
+Q is the set of faculty IDs who have given the Jth course in their preference list.
+\newline
+Equation (4) represents that the sum of the course load of each course must be 1 in order of the completion of the course. 
+\subsection*{Restrictions on variables:- }
+\begin{equation} \nonumber
+    {W_{i,j} \in \{0\;,\;0.5\;,\;1\}\
+\end{equation} 
+\section{Assumptions}
+\begin{enumerate}
+\item Our Algorithm works perfectly for 11 or fewer CDCs and any number of electives and faculties. This is because of our hardware limitations. We can easily increase this to about 25-30 courses using an HPC.
+\item As the course load can be 0.5, 1, 1.5, it's often easier to work with whole numbers, and multiplying by 2 doesn't change the relative values of the $X_i$ or the $W_{ij}$. So, using $W_{ij} = 1, 2, 3$ simplifies the calculations without affecting the overall problem.
+This means 0.5 course load corresponds to 1 and
+1 course load corresponds to 2 and
+1.5 course load corresponds to 3
+\item All the faculties are giving the same number of preferences in the given course category ( CDC / Elective).
+\item The faculty max\_load should be in reverse sorted order ( 3 followed by 2 followed by 1 )
+\end{enumerate}
+\section{Mathematical Tools Used to Solve Problem}
+\subsection{Modeling Faculty Course Allocation with Graphs}
+\paragraph{Introduction}
+The faculty course allocation problem involves assigning courses to faculty members while considering constraints such as maximum teaching load and faculty preferences. Graphs provide a powerful tool for modeling this problem due to their ability to represent relationships between entities.
+
+\subsubsection{Graph Representation}
+In this context, a graph can be constructed with two types of nodes:
+\begin{itemize}
+  \item \textbf{Faculty Nodes}: These nodes represent the faculty members involved in the allocation process.
+  \item \textbf{Course Nodes}: These nodes represent the courses that need to be assigned to faculty members.
+\end{itemize}
+Edges connect faculty nodes to course nodes, indicating that a particular faculty member is qualified to teach a specific course. Each edge can be assigned a weight, representing the faculty member's preference for teaching that course.
+\newline
+\begin{tikzpicture}
+\newcommand{\weight}{1}
+\node[draw,shape=rectangle] (F1) at (0,0) {Faculty 1};
+\node[draw,shape=rectangle] (F2) at (2,0) {Faculty 2};
+\node[draw,shape=rectangle] (F3) at (4,0) {Faculty 3};
+
+\node[draw,shape=rectangle] (C1) at (0,2) {Course 1};
+\node[draw,shape=rectangle] (C2) at (2,2) {Course 2};
+\node[draw,shape=rectangle] (C3) at (4,2) {Course 3};
+
+\draw[thick, edge node={{\weight}}] (F1) -- (C1);
+\draw[thick, edge node={{\weight}}] (F1) -- (C2);
+
+\draw[thick, edge node={{\weight}}] (F2) -- (C1);
+\draw[thick, edge node={{\weight}}] (F2) -- (C2);
+\draw[thick, edge node={{\weight}}] (F2) -- (C3);
+\draw[thick, edge node={{\weight}}] (F3) -- (C2);
+\draw[thick, edge node={{\weight}}] (F3) -- (C3);
+\end{tikzpicture}
+
+\subsubsection{Terminology of Weights}
+
+In the context of faculty course allocation, weights play a crucial role in modeling faculty preferences and optimizing the allocation process. Here's a breakdown of the terminology related to weights:
+
+\begin{itemize}
+\item The weight assigned to an edge connecting a faculty node to a course node rep-
+resents the load faculty will be taking for that course.
+\item Weight = 1 symbolizes 1/2 course will be taken by that faculty. 
+\item Weight = 2 symbolizes that complete course will be taken by that faculty.
+\end{itemize}
+
+By incorporating edge weights, the graph model of faculty course allocation captures the loads of faculty member taking that course, enabling a more nuanced and personalized allocation process
+\subsection{Transportation Approach for electives: }
+\textbf{Objective:}
+Minimize \( \sum_{i}\sum_{j} c_{ij}x_{ij} \), where \( c_{ij} \) is the cost of shipping from supplier \( i \) to consumer \( j \).
+\\
+\textbf{Variables:}
+\( x_{ij} \) represents the quantity of goods shipped from supplier \( i \) to consumer \( j \).
+\\
+\textbf{Constraints:}
+\begin{align*}
+& \text{1. Supply constraints:} & \sum_{j} x_{ij} & \leq \text{Supply}_i & \text{ for each supplier } i \\
+& \text{2. Demand constraints:} & \sum_{i} x_{ij} & \geq \text{Demand}_j & \text{ for each consumer } j \\
+& \text{3. Non-negativity:} & x_{ij} & \geq 0 & \text{ for all } i \text{ and } j
+\newline
+\\ 
+\\ & \text{4. Additionally :} & x_{ij} \in \{1 , 2 , 3\}
+\\
+\\ & \text{5. Course completion constraint : } & \sum _{i} x_{ij} &= 2\;or\;0 \;\;\;\;\;\; \forall j
+\end{align*}
+\\
+\\
+\textbf{Abstraction:}
+\newline
+\\
+1. Supply map to max Course Load 
+\newline
+2. Demand constraint map to courses ( 2 for each course ) 
+\newline
+3. If in above objective function if we replace $c_{ij} $ by -1 and and $ x_{ij}$ is replaced by $W_{ij}$, we get our required objective function in terms of required course faculty transportation
+\newline
+\begin{center}
+\text{ -1*(}
+\text{max} 
+    (\( \sum_{i}\sum_{j} w_{ij} \)))
+\end{center} 
+\subsection{Linear Algebra For CDC's}
+\subsubsection{Representing Faculty Course Allocation as a Linear System : }
+The problem can be modeled as a system of linear equations, where each equation represents a constraint on the assignment of courses to faculty members. The variables in the system represent the number of hours or units that each faculty member is assigned to teach each course.
+For example, if there are two faculties F1(3) and F2(3) and 3 courses C1, C2 and C3 with preference list of F1 as C2,C3 and F2 as C1,C2 Consider the weights $W_{12}$, $W_{13}$, $W_{21}$ ,$W_{22}$ 
+\newline
+The Faculty Load equations formed: 
+\begin{align*}
+W_{12} + W_{13} &\leq 3 \\
+W_{21} + W_{22} &\leq 3
+\end{align*}
+The course equations: 
+\begin{align*}
+W_{12} + W_{21} &= 2 \\
+W_{31} + W_{23} &= 2
+\end{align*}
+\subsubsection{Adding Dummy Variables}
+We are adding dimming variables to convert inequality to equality.
+\begin{align*}
+W_{12} + W_{13} + D_1 &= 3 \\
+W_{21} + W_{22} + D_2 &= 3
+\end{align*}
+\subsubsection{Constructing the Constraint Matrix:}
+Each row of the matrix represents a constraint, and each column corresponds to a faculty member or a course. The entries of the matrix represent the maximum teaching load for each faculty member and the course assignments.
+
+\begin{center}
+\begin{bmatrix}
+0 & 1 & 0 & 1 & 0 & 1 & 3 \\
+1 & 0 & 1 & 0 & 1 & 0 & 3 \\
+0 & 0 & 0 & 0 & 1 & 0 & 2 \\
+0 & 0 & 1 & 0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1 & 0 & 0 & 2 \\
+\end{bmatrix}
+\begin{pmatrix}
+D1 \\
+D2 \\
+W_{22} \\ 
+W_{13} \\ 
+W_{21} \\
+W_{12}\\
+t
+\end{pmatrix}
+\end{center}
+t = -1
+\subsubsection{Null Space and Alternative Solutions:}
+The null space of the constraint matrix represents the set of vectors that can be added to an existing feasible solution without violating the constraints. By adding null space vectors to an initial feasible solution, the code can explore a variety of alternative course assignments.
+\def\R{\mathbb{R}}
+\def\N{\mathbb{N}}
+N(A) = \begin{bmatrix}
+\begin{pmatrix}
+1 \\
+-1 \\
+-1\\
+0\\
+0\\
+1\\
+0\\
+\end{pmatrix},
+\begin{pmatrix}
+1 \\
+-1 \\
+-2\\
+-2\\
+-2\\
+0\\
+1\\
+\end{pmatrix}
+\end{bmatrix}
+\subsubsection{Condition Checking and Infeasible Solutions:}
+The code includes checks to ensure that the generated solutions satisfy the given conditions, such as the maximum teaching load for each faculty member. This prevents the code from generating infeasible solutions.
+\ssububsection{Efficiency and Optimization:}
+The code analyzes the null space to identify directions that lead to improvements in the objective function, such as minimizing the overall teaching load or maximizing the number of preferred course assignments.
+
+\section{Pseudo Algorithm}
+\begin{algorithm}[H]
+\caption{Faculty Course Allocation Algorithm}
+\begin{algorithmic}
+\STATE{1)Create a matrix representation of faculty-course relationships.
+\STATE{2)Calculate the null space of the matrix.}
+\STATE {3)Generate a list of possible course assignments from the null space.}
+\STATE {4) Filter generated solutions to enforce workload constraints.}
+\STATE {5) Identify optimal solutions that satisfy all constraints.}
+\STATE {6) Faculty preferences with final CDC's assignments.}
+\STATE {7) For each case, update the updated max course load in the faculty list }
+\STATE {8) For the Electives, we are using transportation problem where Supply is the list of max loads of a professor and Demand is the List of values containing 1(demand of courses)}
+\STATE { {\return} Return CDC's assignment and elective assignments. }
+\end{algorithmic}
+\end{algorithm}
+
+\section{Python Implementation of Algorithm}
+\begin{algorithm}[H]
+\caption{Faculty Course Allocation Algorithm}
+\label{alg:faculty_course_allocation}
+\begin{algorithmic}[1]
+% \Require Faculty data in CSV format
+\Ensure All professors preference list size is same.
+\State \textbf{Create dict}
+\State \hspace{2mm}Read faculty data from CSV file and store in a dictionary using \texttt{create dict()} function
+\State \textbf{Matrix Representation:}
+\State \hspace{2mm}Represent faculty-course relationships as a matrix in a way that first preference of first 10 faculties remain free variables using \texttt{creatematrix()} function
+\State \hspace{2mm}Calculate null space of the matrix using \texttt{M.nullspace()} method from \texttt{sympy} library
+\State \textbf{Generating Possible Solutions:}
+\State \hspace{2mm}Generate list of possible course assignments from null space using \texttt{find all possible vectors()} function
+\State \textbf{Enforcing Workload Constraints:}
+\State \hspace{2mm}Filter generated solutions to ensure faculty workload does not exceed maximum load
+\State \hspace{2mm}Check if sum of coefficients for each faculty member is less than or equal to their maximum load
+\State \textbf{Selecting Optimal Solutions:}
+\State \hspace{2mm}Consider remaining solutions as optimal, representing valid course assignments
+\State \textbf{Updating Faculty Preferences:}
+\State \hspace{2mm}Update faculty preferences with final course assignments and reduce available max course load
+\State \textbf{Assigning Electives:}
+\State \hspace{2mm}Passing the new faculty preference list with updated course load and pref to elective preference in transportation problem solving function(Custom made)
+\State \textbf{Finalizing Assignments:}
+\State \hspace{2mm}Return optimal solutions as final course assignments
+\end{algorithmic}
+\end{algorithm}
+
+\section{Results}
+The faculty course allocation algorithm was implemented in Python and evaluated using a dataset of faculty data with varying preferences and workload constraints. The algorithm successfully generated optimal course assignments for all faculty members while satisfying their preferences and workload constraints.
+\begin{itemize}
+\item The algorithm effectively handled a variety of faculty preferences, including those with strong preferences for specific courses and those with more flexible preferences.
+\item The algorithm efficiently enforced workload constraints, ensuring that no faculty member was assigned more courses than their maximum load.
+\item The algorithm produced optimal solutions for all test cases, demonstrating its ability to find the best possible course assignments under the given constraints.
+\item The algorithm's performance was evaluated in terms of execution time and solution quality. The algorithm showed good scalability, with execution time increasing linearly with the number of faculty members.
+\end{itemize}
+Overall, the faculty course allocation algorithm proved to be an effective and efficient tool for optimizing course assignments while considering faculty preferences and workload constraints.
+\section{Possible Improvements in Algoritmn}
+\begin{enumerate}
+\item Algorithm accuracy can be improved by removing restriction of free variable loop from 10 to about 20-25 in HPC.Due to hardware limitations we have keep it to 10.
+\item Incorporate Heuristics: Introduce heuristics to guide the search for optimal solutions, reducing the computational complexity of the algorithm. This could involve prioritizing faculty preferences or using constraint satisfaction techniques to eliminate infeasible solutions early on.
+\item Parallelize the Algorithm: Implement parallel processing techniques to distribute the computational workload over multiple processors, significantly reducing the execution time for large-scale problems.
+\item Integrate Machine Learning: Employ machine learning techniques to predict faculty preferences or identify patterns in workload constraints, improving the algorithm's performance and adaptability .
+\end{enumerate}
+
+
+These improvements aim to enhance the algorithm's efficiency, adaptability, and robustness in handling complex faculty course allocation problems.
+\end{document}
