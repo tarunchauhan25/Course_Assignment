@@ -2,18 +2,68 @@
 
 This README serves as the documentation of the code.  
 
-## Note:
+## Algorithms used:
 We have introduced a variable `mode`.   
-If `mode` = 1, most of the faculties are assigned complete courses.  
 If `mode` = 0, most of the faculties are assigned half courses.  
-> Details about the algorithm is provided in the video and the latex file
+If `mode` = 1, most of the faculties are assigned complete courses.  
+
+We have used two techniques to solve the given Course Assignment problem: Linear Programming and Transportation method  
+
+Our main algorithm is Linear Programming which is implemented in [`courseAssignment.py`](courseAssignment.py) (details of implementation in latex file and video). Files [`elec_Algorithm.py`](elec_Algorithm.py), [`hd_CDC_algo.py`](hd_CDC_algo.py) and [`hd_Elec_algo.py`](hd_Elec_algo.py) contain Transportation algorithm.  
 
 ## Libraries used:    
 - `numpy`  
 - `pandas`  
 - `sympy`  
 - `itertools`  
-- `copy`  
+- `copy`
+- `time`
+- `os`
+
+## Files created:  
+- [`Documentation.pdf`](Documentation.pdf) : pdf form of `doc.tex`
+- [`courseAssignment.py`](courseAssignment.py) : main file
+- [`courseAssignment.spec`](courseAssignment.spec) : used for making executable code (.exe)
+- [`crash_test.pdf`](crash_test.pdf) : crash test report
+- [`doc.tex`](doc.tex) : latex documentation
+- [`elec_Algorithm.py`](elec_Algorithm.py), [`hd_CDC_algo.py`](hd_CDC_algo.py) and [`hd_Elec_algo.py`](hd_Elec_algo.py) : respective algorithms for electives and CDCs
+- [`input_1.csv`](input_1.csv) and [`input_2.csv`](input_2.csv) : contains the input in csv format
+- [`output1.txt`](output_1.txt) and [`output2.txt`](output_2.txt) : stores the output in text format
+- [`random_testcase_generator.py`](random_testcase_generator.py) : generates random testcases based on the given number of faculty and courses
+-  [`testcase.pdf`](testcase.pdf) : contains description of testcases and their outputs
+
+## Functions created:  
+
+> ### courseAssignment.py:  
+- `create_dict()` :  takes data from `input.csv` and creates seperate list (array) of `Faculty` objects for fd/hd courses and electives
+- `get_index_of_first_occurrence_of_all_unique_elements(list1,null_space_list)` : 
+
+- `all_positive(list1)` :  
+            - Input: a list containing values of Xi  
+            - Purpose: this checks if the values in the list is >= 0 and <= 2 (since Xi should belong to the set {0, 1, 2})
+- `find_all_possible_vectors(null_space)` :  
+            - Input: a list containing null space vectors  
+            - Purpose: it creates an empty list to store generated vectors and iterated over all possible combinations of coefficients
+
+  
+- `create_matrix(faculties)` :  
+            - Input: a list containing `Faculty` objects  
+            - Purpose: creates the equation matrix
+
+- `makeStringForLoad(num)` :  
+            - Input: a number  
+            - Purpose: returns the equivalent english word for the number  
+
+
+
+> ### elec_Algorithm.py, hd_CDC_algo.py and fd_Elec_algo.py:
+  - `findTotalCourses(self)` : finds the maximum course id given in the prefrence list of faculties
+  - `generateMatrix(self)` : creates a matrix for solving the transportation problem
+  - `createDemand(self)`, `createSupply(self)` : calculates the demand and supply matrix respectively
+  - `balance(self)` : if the total demand is not equal to the total supply, we need to make them equal by introducing dummy course or faculty
+  - `penalties(self)` : calculates the penalties and stores them in a list. It also appends the answer in `self.allAns` when the assignment is done
+  - `operation(self)` : updates `self.matrix` after performaing calculations used for solving transportation problem
+  - `final(self)` : returns one possible assignment
 
 ## Input File: input.csv
 
@@ -33,42 +83,58 @@ The `output.txt` file presents several possible solutions for assigning courses 
 ```plaintext
 ------------------Start-Case------------------
 Possible Solution Number: 1
-Faculty1	 is assigned full course 1 
-Faculty2	 is assigned full course 3 
-Faculty4	 is assigned full course 5 
-Faculty5	 is assigned half course 4 
-Faculty6	 is assigned full course 6 
-Faculty12	 is assigned half course 2 
-Faculty18	 is assigned half course 2 
-Faculty11	 is assigned half course 4 
+FD CDC Assignment
+Professor_1 is assigned half fd cdc course 10 and half fd cdc course 6 
+Professor_2 is assigned full fd cdc course 7 
+Professor_3 is assigned half fd cdc course 2 and half fd cdc course 3 and half fd cdc course 11 
+Professor_4 is assigned half fd cdc course 11 
+Professor_5 is assigned half fd cdc course 4 
+Professor_6 is assigned half fd cdc course 5 
+Professor_7 is assigned half fd cdc course 1 
+Professor_9 is assigned half fd cdc course 6 and half fd cdc course 1 
+Professor_21 is assigned half fd cdc course 8 
+Professor_17 is assigned full fd cdc course 9 
+Professor_25 is assigned half fd cdc course 3 
+Professor_13 is assigned half fd cdc course 8 
+Professor_18 is assigned half fd cdc course 4 
+Professor_19 is assigned half fd cdc course 10 
+Professor_20 is assigned half fd cdc course 2 
+Professor_22 is assigned half fd cdc course 5 
+
+FD Elective Assignment
+Professor_1 is assigned half fd elective course 1
+Professor_2 is assigned half fd elective course 2
+Professor_4 is assigned half fd elective course 2
+Professor_4 is assigned half fd elective course 4
+Professor_5 is assigned half fd elective course 1
+Professor_5 is assigned half fd elective course 3
+Professor_6 is assigned full fd elective course 6
+Professor_7 is assigned half fd elective course 4
+Professor_7 is assigned half fd elective course 5
+Professor_8 is assigned half fd elective course 3
+Professor_8 is assigned full fd elective course 7
+Professor_9 is assigned half fd elective course 5
+Professor_12 is assigned full fd elective course 8
+
+HD CDC Assignment
+Professor_10 is assigned full hd elective course 3
+Professor_11 is assigned full hd elective course 2
+Professor_13 is assigned half hd elective course 4
+Professor_14 is assigned full hd elective course 1
+Professor_18 is assigned half hd elective course 4
+Professor_20 is assigned half hd elective course 5
+Professor_22 is assigned half hd elective course 5
+
+HD Elective Assignment
+Professor_15 is assigned full hd elective course 3
+Professor_16 is assigned full hd elective course 1
+Professor_19 is assigned half hd elective course 4
+Professor_21 is assigned half hd elective course 2
+Professor_23 is assigned half hd elective course 2
+Professor_24 is assigned half hd elective course 4
 ------------------End-Case------------------
+
 ```
-
-## Interpretation:
-
-Faculty member 'a' is assigned 0.5 of course 8 and 1.0 of course 6.
-Similar assignments are made for other faculty members according to their preferences and the maximum load constraints.
-
-## Functions created:
-
-- `create_dict()` :
-
-- `all_positive(list1)` :  
-            - Input: a list containing values of Xi  
-            - Purpose: this checks if the values in the list is >= 0 and <= 2 (since Xi should belong to the set {0, 1, 2})
-- `find_all_possible_vectors(null_space)` :  
-            - Input: a list containing null space vectors  
-            - Purpose: it creates an empty list to store generated vectors and iterated over all possible combinations of coefficients
-
-  
-- `create_matrix(faculties)` :  
-            - Input: a list containing `Faculty` objects  
-            - Purpose: creates the equation matrix
-
-- `makeStringForLoad(num)` :  
-            - Input: a number  
-            - Purpose: returns the equivalent english word for the number   
-
 ## Conclusion:
 
 The output.txt file provides multiple possible solutions to the assignment problem, each adhering to the faculty members' preferences and load constraints. Analyzing these solutions can help in selecting the most suitable assignment strategy for the given scenario.
