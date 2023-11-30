@@ -10,7 +10,7 @@ This project contains algorithm to solve the Faculty Course Assignment problem. 
 Due to Github restriction (of 25 mb) we could not upload the video and executable file here. Please access them through [this google drive link](https://drive.google.com/drive/folders/13WKMec3Ds-A400uwICikQeUK2Obra-s-?usp=sharing).  
 If the system does not have the given library then use the `Executable` folder for procedure to run the code. The folder contains a setup video and a zip for both MacOS and Windows.
 
-## Note: 
+## How to run: 
 How to run
  1. Windows:- Download the Executable for windows from the drive and follow setup instructions given in Windows setup video.
  2. MacOS:- Due to security issues exe was not running on MacOS so need to run the program natively using Python through shell.Install Python and required libraries then fill the input.csv with faculty data and in the same folder open terminal and run python3 courseAssignment.py.(sometimes python3 may not work so use python in that case)
