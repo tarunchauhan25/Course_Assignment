@@ -1,0 +1,8 @@
+Faculty_Name,Faculty_Num,Max_Load,Course_Pref,Elec_Pref,Hd_CDC_Pref,Hd_Elec_Pref
+Professor_1,1,3,[4 2 5 1],[3 2 4 1],[3 4],[2 1]
+Professor_2,2,3,[2 4 3 1],[1 3 2 4],[1 2],[1 2]
+Professor_3,3,2,[1 4 3 2],[4 1 3 2],[3 6],[1 2]
+Professor_4,4,2,[5 3 1 2],[2 4 3 1],[2 4],[2 1]
+Professor_5,5,2,[1 4 3 5],[2 3 1 4],[4 1],[1 2]
+Professor_6,6,2,[2 3 5 1],[3 1 2 4],[2 6],[2 1]
+Professor_7,7,2,[3 2 5 1],[3 1 2 4],[5 4],[2 1]
