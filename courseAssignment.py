@@ -6,7 +6,7 @@ import copy
 import time
 import os
 from elec_Algorithm import *
-from hd_CDC_akgo import *
+from hd_CDC_algo import *
 from hd_Elec_algo import *
 dirname = os.path.dirname(__file__)
 print(dirname)
