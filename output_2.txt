@@ -38,14 +38,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned half hd elective course 5
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned half hd cdc course 5
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -97,14 +97,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned half hd elective course 5
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned half hd cdc course 5
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -157,14 +157,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_19 is assigned full hd elective course 4
@@ -215,14 +215,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_19 is assigned full hd elective course 4
@@ -272,14 +272,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_19 is assigned full hd elective course 4
@@ -329,14 +329,14 @@ Professor_10 is assigned half fd elective course 10
 Professor_11 is assigned half fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned half hd elective course 5
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned half hd elective course 5
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned half hd cdc course 5
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned half hd cdc course 5
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_15 is assigned half hd elective course 4
@@ -388,15 +388,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned half hd elective course 5
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned half hd cdc course 5
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -446,15 +446,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned half hd elective course 5
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned half hd cdc course 5
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -505,15 +505,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
-Professor_19 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
+Professor_19 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -563,15 +563,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
-Professor_19 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
+Professor_19 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -621,15 +621,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
-Professor_18 is assigned half hd elective course 5
-Professor_19 is assigned half hd elective course 5
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
+Professor_18 is assigned half hd cdc course 5
+Professor_19 is assigned half hd cdc course 5
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -680,14 +680,14 @@ Professor_10 is assigned half fd elective course 6
 Professor_10 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned full hd elective course 1
-Professor_11 is assigned half hd elective course 3
-Professor_12 is assigned full hd elective course 7
-Professor_14 is assigned full hd elective course 2
-Professor_15 is assigned full hd elective course 5
-Professor_16 is assigned half hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned full hd cdc course 1
+Professor_11 is assigned half hd cdc course 3
+Professor_12 is assigned full hd cdc course 7
+Professor_14 is assigned full hd cdc course 2
+Professor_15 is assigned full hd cdc course 5
+Professor_16 is assigned half hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_16 is assigned half hd elective course 1
@@ -737,15 +737,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_11 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned half hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned full hd elective course 5
-Professor_14 is assigned half hd elective course 1
-Professor_14 is assigned half hd elective course 2
-Professor_15 is assigned half hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned half hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned full hd cdc course 5
+Professor_14 is assigned half hd cdc course 1
+Professor_14 is assigned half hd cdc course 2
+Professor_15 is assigned half hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -795,15 +795,15 @@ Professor_10 is assigned half fd elective course 6
 Professor_11 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned half hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned full hd elective course 5
-Professor_14 is assigned half hd elective course 1
-Professor_14 is assigned half hd elective course 2
-Professor_15 is assigned half hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned full hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned half hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned full hd cdc course 5
+Professor_14 is assigned half hd cdc course 1
+Professor_14 is assigned half hd cdc course 2
+Professor_15 is assigned half hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned full hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -854,16 +854,16 @@ Professor_10 is assigned half fd elective course 6
 Professor_11 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned half hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned full hd elective course 5
-Professor_14 is assigned half hd elective course 1
-Professor_14 is assigned half hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned half hd elective course 2
-Professor_17 is assigned half hd elective course 6
-Professor_20 is assigned half hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned half hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned full hd cdc course 5
+Professor_14 is assigned half hd cdc course 1
+Professor_14 is assigned half hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned half hd cdc course 2
+Professor_17 is assigned half hd cdc course 6
+Professor_20 is assigned half hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -914,16 +914,16 @@ Professor_10 is assigned half fd elective course 6
 Professor_11 is assigned full fd elective course 10
 
 HD CDC Assignment
-Professor_9 is assigned full hd elective course 4
-Professor_11 is assigned half hd elective course 1
-Professor_12 is assigned full hd elective course 7
-Professor_13 is assigned full hd elective course 5
-Professor_14 is assigned half hd elective course 1
-Professor_14 is assigned half hd elective course 2
-Professor_16 is assigned full hd elective course 3
-Professor_17 is assigned half hd elective course 2
-Professor_17 is assigned half hd elective course 6
-Professor_20 is assigned half hd elective course 6
+Professor_9 is assigned full hd cdc course 4
+Professor_11 is assigned half hd cdc course 1
+Professor_12 is assigned full hd cdc course 7
+Professor_13 is assigned full hd cdc course 5
+Professor_14 is assigned half hd cdc course 1
+Professor_14 is assigned half hd cdc course 2
+Professor_16 is assigned full hd cdc course 3
+Professor_17 is assigned half hd cdc course 2
+Professor_17 is assigned half hd cdc course 6
+Professor_20 is assigned half hd cdc course 6
 
 HD Elective Assignment
 Professor_18 is assigned half hd elective course 1
@@ -934,5 +934,3 @@ Professor_24 is assigned half hd elective course 3
 Professor_27 is assigned half hd elective course 1
 Professor_28 is assigned full hd elective course 5
 ------------------End-Case------------------
-
-
