@@ -13,7 +13,7 @@ If the system does not have the given library then use the `Executable` folder f
 ## Note: 
 How to run
  1. Windows:- Download the Executable for windows from the drive and follow setup instructions given in Windows setup video.
- 2. MacOS:- Due to security issues exe was not running on MacOS so need to run the program natively using Python through shell.Install Python and required libraries then fill the input.csv with faculty data and in the same folder open terminal and run python3 courseAssingment.py.(sometimes python3 may not work so use python in that case)
+ 2. MacOS:- Due to security issues exe was not running on MacOS so need to run the program natively using Python through shell.Install Python and required libraries then fill the input.csv with faculty data and in the same folder open terminal and run python3 courseAssignment.py.(sometimes python3 may not work so use python in that case)
 ## Algorithms used:
 We have introduced a variable `mode`.   
 If `mode` = 0, most of the faculties are assigned half courses.  
