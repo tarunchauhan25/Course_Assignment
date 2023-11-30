@@ -5,7 +5,7 @@ This README serves as the documentation of the code.
 ## Note:
 We have introduced a variable `mode`.   
 If `mode` = 1, most of the faculties are assigned complete courses.  
-If `mode` = 2, most of the faculties are assigned half courses.  
+If `mode` = 0, most of the faculties are assigned half courses.  
 > Details about the algorithm is provided in the video and the latex file
 
 ## Libraries used:    
