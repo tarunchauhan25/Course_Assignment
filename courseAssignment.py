@@ -17,7 +17,7 @@ mode = 0 #Mode of Operation
 #0 For Half Assignment Mode
 #1 For Complete Assignment Mode
 print("Programme started")
-# print("Programme is running...............")
+
 class Faculty:
     def __init__(self, name, id, maxload, prefl,ele_pref,hd_cdc_pref,hd_elec_pref):
         self.name = name
@@ -131,7 +131,7 @@ def find_all_possible_vectors(null_space,fac3load):
             if generated_vector_r_3.tolist() not in generated_vector_rs_3:
                 if all_positive(generated_vector_r_3.tolist(),fac3load):
                     generated_vector_rs_3.append(generated_vector_r_3.tolist())
-        # generated_vectors, generated_vector_rs_1, generated_vector_rs_2,
+
     return  generated_vector_rs_3
 
 
@@ -198,7 +198,7 @@ num_vars = len(null_list)
 null_space = np.array(null_list_final)
 print("Dimension of Null Space of Solution Set "+str(len(null_space)))
 course_order = sorted(get_index_of_first_occurrence_of_all_unique_elements(course_order,null_list_final))
-#print(course_order,len(null_space))
+
 generated_vector_rs_3 = find_all_possible_vectors(null_space,dummy3load)
 count = 0
 print("Copying the solutions to output.txt file")
@@ -217,22 +217,9 @@ for sol in generated_vector_rs_3:
         if i != 0 and i <= (len(matrix3) * len(matrix3[0].pref)) and s != 0:
             if matrix3[(i - 1) % (len(matrix3))].name in final_assignment:
                 final_assignment[matrix3[(i - 1) % (len(matrix3))].name].append(
-                    [
-                        matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][
-                            0
-                        ],
-                        s / 2,
-                    ]
-                )
+                    [matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][0], s/2,])
             else:
-                final_assignment[matrix3[(i - 1) % (len(matrix3))].name] = [
-                    [
-                        matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][
-                            0
-                        ],
-                        s / 2,
-                    ]
-                ]
+                final_assignment[matrix3[(i - 1) % (len(matrix3))].name] = [[matrix3[(i - 1) % (len(matrix3))].pref[(i - 1) // len(matrix3)][0], s/2,]]
     all_final_assignment[count + 1] = final_assignment
     final_assignment = {}
     final_sol.append(f_a)
@@ -246,7 +233,7 @@ def makeStringForLoad(num):
         return "half"
     elif num == 1:
         return "full"
-# print(all_final_assignment)
+
 #Saving final Assignment to output file
 max_id = 0
 max_count_fdele = 0
@@ -256,7 +243,7 @@ if len(all_final_assignment) == 0:
     cdc_count = 0
 for case in all_final_assignment.keys():
     matrix3 = copy.deepcopy(matrix3Copy)
-    # print("Possible Solution Number: ", case)
+
     file.write("------------------Start-Case------------------")
     file.write("\n")
     file.write("Possible Solution Number: " + str(case))
@@ -264,7 +251,6 @@ for case in all_final_assignment.keys():
     file.write("FD CDC Assignment")
     file.write("\n")
     for faculty in all_final_assignment[case]:
-        # print(str(faculty) + " is assigned ", end="")
         index = 0
         for i in range(len(matrix3)):
             if matrix3[i].name == faculty:
@@ -272,18 +258,9 @@ for case in all_final_assignment.keys():
         file.write(str(str(faculty) + " is assigned "))
         for courses in range(len(all_final_assignment[case][faculty])):
             if courses != 0:
-                # print("and ", end="")
                 file.write("and ")
-            # print(
-            #     makeStringForLoad(all_final_assignment[case][faculty][courses][1])
-            #     + " course "
-            #     + str(all_final_assignment[case][faculty][courses][0])
-            #     + " ",
-            #     end="",
-            # )
             matrix3[index].maxload -= 2*all_final_assignment[case][faculty][courses][1]
             file.write(str(makeStringForLoad(all_final_assignment[case][faculty][courses][1])+ " fd cdc course "+ str(all_final_assignment[case][faculty][courses][0])+ " "))
-        # print(".")
         file.write("\n")
     file.write("\n")
     t = Initial(matrix3)
@@ -370,8 +347,7 @@ for case in all_final_assignment.keys():
                 file.write("\n")
                 matrix3[f].maxload -= j
         f+=1
-    
-#    print("------------------End-Case------------------")
+
     file.write("------------------End-Case------------------")
     file.write("\n")
     file.write("\n")
