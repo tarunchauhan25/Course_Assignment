@@ -1,6 +1,10 @@
 # Course_Assignment
 
-This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.
+This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.  
+
+## Note:  
+Due to Github restriction (of 25 mb) we could not upload the video and executable file here. Please access them through [this google drive link](https://drive.google.com/drive/folders/13WKMec3Ds-A400uwICikQeUK2Obra-s-?usp=sharing).  
+If the system does not have the given library then use the `Executable` folder for procedure to run the code. The folder contains a setup video and a zip.
 
 ## Algorithms used:
 We have introduced a variable `mode`.   
