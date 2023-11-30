@@ -4,15 +4,15 @@
 2. Aditya Bagla (2022A7PS0497G)
 3. Tarun Chauhan (2022A7PS0025G)
  
-This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.  
+This project contains Algorithm to solve the Faculty Course Assignment problem. Given the preference list of faculties, we have to assign them courses within their preference list.  
 
 ## Note:  
-Due to Github restriction (of 25 mb) we could not upload the video and executable file here. Please access them through [this google drive link](https://drive.google.com/drive/folders/13WKMec3Ds-A400uwICikQeUK2Obra-s-?usp=sharing).  
+Due to GitHub restriction (of 25 MB), we could not upload the video and executable file here. Please access them through [this Google Drive link](https://drive.google.com/drive/folders/13WKMec3Ds-A400uwICikQeUK2Obra-s-?usp=sharing).  
 If the system does not have the given library then use the `Executable` folder for procedure to run the code. The folder contains a setup video and a zip for both MacOS and Windows.
 
 ## How to run: 
- 1. Windows:- Download the Executable for windows from the drive and follow setup instructions given in Windows setup video.
- 2. MacOS:- Due to security issues exe was not running on MacOS so need to run the program natively using Python through shell.Install Python and required libraries then fill the input.csv with faculty data and in the same folder open terminal and run python3 courseAssignment.py.(sometimes python3 may not work so use python in that case)
+ 1. Windows:- Download the Executable for Windows from the drive and follow setup instructions given in Windows setup video.
+ 2. MacOS:- Due to security issues exe was not running on MacOS so need to run the program natively using Python through shell.install Python and required libraries then fill the input.csv with faculty data and in the same folder open terminal and run python3 courseAssignment.py.(sometimes python3 may not work so use python in that case)
 ## Algorithms used:
 We have introduced a variable `mode`.   
 If `mode` = 0, most of the faculties are assigned half courses.  
@@ -22,7 +22,7 @@ We have used two techniques to solve the given Course Assignment problem: Linear
 
 Our main algorithm is Linear Programming which is implemented in [`courseAssignment.py`](courseAssignment.py) (details of implementation in latex file and video). Files [`elec_Algorithm.py`](elec_Algorithm.py), [`hd_CDC_algo.py`](hd_CDC_algo.py) and [`hd_Elec_algo.py`](hd_Elec_algo.py) contain Transportation algorithm.  
 
-It can be thought of a transportation problem where the main matrix will contain a constant value (-1 in this case) for the courses in prefrence list, infnity elsewhere. The demands of course will be 1 and supply by the faculties will be their maximum loads.
+It can be thought of a transportation problem where the main matrix will contain a constant value (-1 in this case) for the courses in preference list, infinity elsewhere. The demands of course will be 1 and supply by the faculties will be their maximum loads.
 
 ## Libraries used:    
 - `numpy`  
@@ -74,12 +74,12 @@ It can be thought of a transportation problem where the main matrix will contain
 
 
 > ### elec_Algorithm.py, hd_CDC_algo.py and fd_Elec_algo.py:
-  - `findTotalCourses(self)` : finds the maximum course id given in the prefrence list of faculties
+  - `findTotalCourses(self)` : finds the maximum course I'd given in the preference list of faculties
   - `generateMatrix(self)` : creates a matrix for solving the transportation problem
   - `createDemand(self)`, `createSupply(self)` : calculates the demand and supply matrix respectively
   - `balance(self)` : if the total demand is not equal to the total supply, we need to make them equal by introducing dummy course or faculty
   - `penalties(self)` : calculates the penalties and stores them in a list. It also appends the answer in `self.allAns` when the assignment is done
-  - `operation(self)` : updates `self.matrix` after performaing calculations used for solving transportation problem
+  - `operation(self)` : updates `self.matrix` after performing calculations used for solving transportation problem
   - `final(self)` : returns one possible assignment
 
 ## Input File: input.csv
