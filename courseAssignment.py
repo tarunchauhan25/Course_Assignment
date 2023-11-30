@@ -9,8 +9,6 @@ from elec_Algorithm import *
 from hd_CDC_algo import *
 from hd_Elec_algo import *
 dirname = os.path.dirname(__file__)
-print(dirname)
-dirname="/".join(dirname.split(sep='/')[:-1])
 input_file = os.path.join(dirname, 'input.csv')
 #Explain Potential Modifications
 mode = 0 #Mode of Operation
