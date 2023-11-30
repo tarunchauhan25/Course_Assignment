@@ -1,6 +1,6 @@
 # Course_Assignment
 
-This README serves as the documentation of the code.  
+This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.
 
 ## Algorithms used:
 We have introduced a variable `mode`.   
@@ -10,6 +10,8 @@ If `mode` = 1, most of the faculties are assigned complete courses.
 We have used two techniques to solve the given Course Assignment problem: Linear Programming and Transportation method  
 
 Our main algorithm is Linear Programming which is implemented in [`courseAssignment.py`](courseAssignment.py) (details of implementation in latex file and video). Files [`elec_Algorithm.py`](elec_Algorithm.py), [`hd_CDC_algo.py`](hd_CDC_algo.py) and [`hd_Elec_algo.py`](hd_Elec_algo.py) contain Transportation algorithm.  
+
+It can be thought of a transportation problem where the main matrix will contain a constant value (-1 in this case) for the courses in prefrence list, infnity elsewhere. The demands of course will be 1 and supply by the faculties will be their maximum loads.
 
 ## Libraries used:    
 - `numpy`  
