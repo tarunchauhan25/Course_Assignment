@@ -6,7 +6,7 @@ def generate_input(
     num_faculty, num_courses, num_elec_courses, num_hdcdc_courses
 ):
     input = []
-    all_cdc = set()
+    all_cdc = set()  
     all_electives = set()
     all_hd_cdc = set()
     all_hd_elec = set()
