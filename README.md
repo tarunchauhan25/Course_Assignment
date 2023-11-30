@@ -8,7 +8,7 @@ This project contains Algorithm to solve the Faculty Course Assignment problem. 
 
 ## Note:  
 Due to GitHub restriction (of 25 MB), we could not upload the video and executable file here. Please access them through [this Google Drive link](https://drive.google.com/drive/folders/13WKMec3Ds-A400uwICikQeUK2Obra-s-?usp=sharing).  
-If the system does not have the given library then use the `Executable` folder for procedure to run the code. The folder contains a setup video and a zip for both MacOS and Windows.
+If the system does not have the given library then use the `Executable` folder for procedure to run the code. The folder contains a setup video and a zip for Windows.
 
 ## How to run: 
  1. Windows:- Download the Executable for Windows from the drive and follow setup instructions given in Windows setup video.
