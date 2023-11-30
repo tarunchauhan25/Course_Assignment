@@ -1,5 +1,8 @@
-# Course_Assignment
-
+# Course Assignment
+## Our Team
+### 1. Tanish Desai(2022A7PS0053G)
+### 2. Aditya Bagla(2022A7PS0497G)
+### 3. Tarun Chauhan(2022A7PS0025G)
 This project contains algorithm to solve the Faculty Course Assignment problem. Given the prefrence list of faculties, we have to assign them courses within their prefrence list.  
 
 ## Note:  
