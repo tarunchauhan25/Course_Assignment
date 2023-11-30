@@ -53,6 +53,8 @@ It can be thought of a transportation problem where the main matrix will contain
 - `all_positive(list1)` :  
             - Input: a list containing values of Xi  
             - Purpose: this checks if the values in the list is >= 0 and <= 2 (since Xi should belong to the set {0, 1, 2})
+
+  
 - `find_all_possible_vectors(null_space)` :  
             - Input: a list containing null space vectors  
             - Purpose: it creates an empty list to store generated vectors and iterated over all possible combinations of coefficients
